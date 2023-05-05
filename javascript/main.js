@@ -1,25 +1,15 @@
-
-
 const biggerContainer = document.querySelector(".bigger-contaier");
 
 const thanks = document.getElementById("thanks");
 const number = document.getElementById("number");
 
 const buy = document.querySelectorAll(".js-buy");
- 
-
 
 const addProduct = document.querySelector("#add-pro");
 const procontainer = document.querySelector("#pro-container");
 
-
-
-
-
-
-addProduct.addEventListener("click" , (eo) => {
-  
-const newProduct =     `  
+addProduct.addEventListener("click", (eo) => {
+  const newProduct = `  
 
 <div class="card mycard" style="width: 18rem;">
 <img style="border-radius: 5px;" src="pexels-cottonbro-3826678.jpg" class="card-img-top" alt="...">
@@ -32,50 +22,24 @@ const newProduct =     `
 </div>
 
 
-`
+`;
 
-procontainer.innerHTML += newProduct
-
-})
-
-
-
-
-
-
-
- 
-
-
-
-
+  procontainer.innerHTML += newProduct;
+});
 
 // when i click on buy button
 procontainer.addEventListener("click", (eo) => {
-  
-if (eo.target.classList == "js-buy btn btn-primary" ) {
-      biggerContainer.classList.add("active");
+  if (eo.target.classList == "js-buy btn btn-primary") {
+    biggerContainer.classList.add("active");
     eo.preventDefault();
 
     thanks.style.display = "none";
 
     number.style.display = "block";
-}
-
-
-})
-
-
-
-
-
-
-
+  }
+});
 
 const submit = document.querySelector(".submit");
-
- 
-
 
 submit.addEventListener("click", (eo) => {
   thanks.style.display = "block";
@@ -85,24 +49,7 @@ submit.addEventListener("click", (eo) => {
     thanks.style.display = "none";
     biggerContainer.classList.remove("active");
   }, 2000);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 const dark = document.getElementById("dark");
 const body = document.getElementById("body");
@@ -110,8 +57,3 @@ const body = document.getElementById("body");
 dark.addEventListener("click", (eo) => {
   body.classList.toggle("dark");
 });
-
-
-
-
-
